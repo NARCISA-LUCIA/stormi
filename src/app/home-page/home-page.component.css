@@ -1,0 +1,105 @@
+.form {
+  gap: 10px;
+  display: flex;
+  flex-direction: column;
+  padding: 10px;
+}
+
+.search-form {
+  width: 500px;
+  height: 55px;
+}
+
+.current-weather {
+  display: flex;
+}
+
+.container-city-degrees {
+  display: flex;
+  flex-direction: column;
+  flex: 2;
+}
+
+.icon-sunny {
+  display: flex;
+  font-size: 80px;
+  justify-content: center;
+  height: 80px;
+  width: 80px;
+}
+
+.sunny-container {
+  display: flex;
+  align-items: center;
+  flex: 1;
+}
+
+.city {
+  width: 500px;
+  display: flex;
+  flex-direction: row;
+  padding: 10px;
+  border-radius: 20px;
+}
+
+.current-degrees {
+  height: 100%;
+  margin-top: 15px;
+  font-size: 30px;
+  font-weight: 600;
+}
+
+/* today's forecast */
+
+.forecast-parent-container {
+  display: flex;
+  flex-direction: row;
+  gap: 10px;
+}
+
+.forecast-container {
+  display: flex;
+  flex-direction: column;
+  height: 90px;
+  border-right: 1px solid grey;
+  align-items: center;
+  gap: 15px;
+  padding-left: 10px;
+  padding-right: 10px;
+}
+
+.forecast-card {
+  display: flex;
+  row-gap: 30px;
+  height: 100%;
+  padding: 20px;
+  width: 500px;
+  border-radius: 20px;
+}
+
+.weather-air-conditions {
+  display: flex;
+  flex-direction: column;
+  row-gap: 20px;
+}
+
+.weather-conditions-container {
+  display: flex;
+  column-gap: 150px;
+}
+
+h3 {
+  text-transform: uppercase;
+  margin-bottom: -15px;
+  font-weight: 500;
+  font-size: small;
+}
+
+.real-feel-temperature {
+  display: flex;
+}
+
+.thermostat,
+.daily-degrees {
+  padding-left: 10px;
+}

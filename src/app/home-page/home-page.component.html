@@ -1,0 +1,80 @@
+<div class="form">
+    <div class="form-container" [formGroup]="formControlGroup">
+        <mat-card class="search-form">
+            <mat-form-field appearance="outline" class="outline-form">
+                <input matInput placeholder="Search cities" formControlName="city" (keyup.enter)="getData()">
+            </mat-form-field>
+        </mat-card>
+    </div>
+    <div class="current-weather" *ngIf="currentComponents != undefined">
+        <mat-card class="city">
+            <div class="container-city-degrees">
+                <h1 class="city-name">{{currentComponents.city}}</h1>
+                <span class="current-degrees"
+                    *ngIf="currentWeatherData != undefined">{{currentWeatherData.current_weather.temperature|
+                    number:'1.0-0'}}°</span>
+            </div>
+            <div class="sunny-container">
+                <mat-icon class="icon-sunny">sunny</mat-icon>
+            </div>
+        </mat-card>
+    </div>
+    <div class="six-days-forecast">
+        <mat-card class="forecast-card">
+            <h3>Today's Forecast</h3>
+            <div class="forecast-parent-container">
+                <div class="forecast-container">
+                    <span class="morning-hour">06:00 AM</span>
+                    <mat-icon>cloudy</mat-icon>
+                    <span class="morning-degrees">25°</span>
+                </div>
+                <!-- <mat-divider></mat-divider> -->
+                <div class="forecast-container">
+                    <span class="morning-hour">06:00 AM</span>
+                    <mat-icon>cloudy</mat-icon>
+                    <span class="morning-degrees">25°</span>
+                </div>
+            </div>
+        </mat-card>
+    </div>
+    <div class="air-conditions-container">
+        <mat-card class="forecast-card">
+            <h3>Air Conditions</h3>
+            <div class="weather-conditions-container">
+            <div class="weather-air-conditions">
+                <div class="real-feel-temperature">
+                    <mat-icon>thermostat</mat-icon>
+                    <div class="air-conditions ">
+                        <p class="thermostat">Real Feel</p>
+                        <span class="daily-degrees">30°</span>
+                    </div>
+                </div>
+                <div class="real-feel-temperature">
+                    <mat-icon>water_drop</mat-icon>
+                    <div class="air-conditions ">
+                        <p class="thermostat">Chance of rain</p>
+                        <span class="daily-degrees">0%</span>
+                    </div>
+
+                </div>
+            </div>
+            <div class="weather-air-conditions">
+                <div class="real-feel-temperature">
+                    <mat-icon>air</mat-icon>
+                    <div class="air-conditions ">
+                        <p class="thermostat">Wind</p>
+                        <span class="daily-degrees">0.2 km/h</span>
+                    </div>
+                </div>
+                <div class="real-feel-temperature">
+                    <mat-icon>wb_sunny</mat-icon>
+                    <div class="air-conditions ">
+                        <p class="thermostat">UV Index</p>
+                        <span class="daily-degrees">3</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+        </mat-card>
+    </div>
+</div>
